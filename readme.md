@@ -1,45 +1,73 @@
-# RealityFrame
+# RealityFrame – AI-Powered Augmented Reality & Invisibility System
 
-RealityFrame is a real-time computer vision project built with Python, OpenCV, and MediaPipe. It combines gesture recognition, background reconstruction, selective invisibility, and AR effects to create an interactive privacy and visual effects system.
+RealityFrame is an advanced real-time Computer Vision and Augmented Reality platform built using Python, OpenCV, MediaPipe, and YOLOv8. The system combines gesture recognition, AI-powered object detection, background reconstruction, selective invisibility, and AR overlays into a single interactive experience.
 
-## Features
+The project demonstrates the integration of multiple AI and Computer Vision technologies working together in real time on live webcam feeds.
 
-* Gesture-controlled invisibility modes
-* Partial invisibility using pinch/snap gesture
-* Full invisibility using L-hand gesture
+---
+
+## Key Features
+
+### AI Object Detection
+
+* Real-time object detection using YOLOv8
+* GPU-accelerated inference
+* Object confidence visualization
+* Multiple object tracking and recognition
+
+### Smart Invisibility System
+
+* Full-body invisibility mode using AI segmentation
+* Portal-based selective invisibility
+* Dynamic background reconstruction
+* Adaptive lighting correction for realistic blending
+
+### Gesture-Based Control
+
+* Hand tracking using MediaPipe
+* Pinch gesture mode switching
+* Touchless interaction system
+* Real-time gesture recognition
+
+### Augmented Reality Engine
+
+* Marker-based AR tracking
+* Dynamic AR overlays
+* Perspective-correct rendering
+* Real-time target locking
+
+### Performance Monitoring
+
+* Live FPS monitoring
+* GPU status monitoring
+* Optimized detection pipeline
+* Reduced-latency object detection
+
+### Interactive Focus Mode
+
 * Custom focus area selection
-* Real-time background reconstruction
-* AR overlay support
-* Smooth blending and masking effects
+* Mouse-driven region targeting
+* Background isolation effects
 
-## Practical Uses
+---
 
-### Online Meetings
+## Technologies Used
 
-Keep only your workspace visible while hiding distractions around you. This can prevent people walking behind you from appearing on camera and helps maintain privacy during calls.
+* Python
+* OpenCV
+* MediaPipe
+* YOLOv8
+* PyTorch
+* NumPy
+* Computer Vision
+* Augmented Reality
+* Real-Time Image Processing
+* GPU Acceleration (CUDA)
 
-### Content Creation
+---
 
-Create unique visual effects and selective visibility regions without requiring a green screen.
+## System Architecture
 
-### Privacy Enhancement
-
-Hide unwanted areas of a room while keeping important objects or workspaces visible.
-
-## Controls
-
-| Action                | Control              |
-| --------------------- | -------------------- |
-| Partial Invisibility  | Pinch / Snap Gesture |
-| Full Invisibility     | L-Hand Gesture       |
-| Start Focus Selection | F                    |
-| Select Visible Region | 4 Mouse Clicks       |
-| Reset Selection       | R                    |
-| Quit Application      | Q                    |
-
-## Project Structure
-
-```text
 RealityFrame/
 │
 ├── ar/
@@ -47,58 +75,113 @@ RealityFrame/
 │   ├── overlay_factory.py
 │   └── target_tracker.py
 │
-├── assets/
-│   └── marker_0.png
-│
 ├── core/
 │   └── background.py
 │
 ├── graphics/
 │   └── renderer.py
 │
-├── tools/
-│   ├── generate_marker.py
-│   └── test_marker.py
-│
 ├── vision/
 │   ├── gesture.py
 │   ├── hand_tracker.py
-│   └── portal_detector.py
+│   ├── portal_detector.py
+│   └── yolo_detector.py
+│
+├── assets/
+│
+├── tools/
 │
 ├── main.py
 └── requirements.txt
-```
 
-## Technologies Used
+---
 
-* Python
-* OpenCV
-* MediaPipe
-* NumPy
-* Computer Vision
-* Image Processing
+## Controls
+
+| Key | Function                 |
+| --- | ------------------------ |
+| Q   | Quit Application         |
+| B   | Rebuild Background Model |
+| F   | Toggle Focus Mode        |
+| R   | Reset Focus Area         |
+| A   | Toggle AR Mode           |
+| V   | Toggle AR Tracking Frame |
+
+---
+
+## Real-World Applications
+
+### Smart Privacy Systems
+
+Hide sensitive areas during video calls while maintaining a natural appearance.
+
+### AI Surveillance & Monitoring
+
+Detect and track objects in real time using deep learning.
+
+### Interactive AR Experiences
+
+Create immersive augmented reality interactions using marker tracking.
+
+### Content Creation
+
+Generate visual effects and selective invisibility without requiring a green screen.
+
+### Educational Computer Vision Platform
+
+Demonstrates practical applications of:
+
+* Deep Learning
+* Object Detection
 * Gesture Recognition
+* Image Segmentation
+* Augmented Reality
+* Human-Computer Interaction
+
+---
+
+## Performance Enhancements
+
+* YOLOv8 GPU acceleration
+* Real-time FPS monitoring
+* Optimized detection scheduling
+* Low-latency rendering pipeline
+* Adaptive background reconstruction
+
+---
 
 ## Installation
 
-```bash
-git clone https://github.com/yourusername/RealityFrame.git
+git clone https://github.com/SuhaibIqbal12/RealityFrame.git
+
 cd RealityFrame
+
 pip install -r requirements.txt
-```
+
+---
 
 ## Run
 
-```bash
 python main.py
-```
 
-## Future Improvements
+---
 
-* Advanced AR object placement
-* Multi-user tracking
-* Additional gesture controls
-* Improved segmentation quality
-* Object-specific invisibility modes
+## Future Roadmap
 
-Built as an exploration of real-time computer vision, gesture interaction, privacy-focused camera systems, and augmented reality concepts.
+* Voice-controlled commands
+* Custom-trained object detection models
+* Multi-person tracking
+* Face recognition integration
+* AI scene understanding
+* Spatial AR object placement
+* Gesture-controlled UI system
+
+---
+
+## Author
+
+Mohammed Suhaib Iqbal
+
+B.Tech CSE (AI & ML)
+
+Computer Vision • Artificial Intelligence • Augmented Reality • Deep Learning

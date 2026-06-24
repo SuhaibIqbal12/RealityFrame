@@ -9,10 +9,11 @@ class BackgroundModel:
     def capture(self, cap, frames_count=120):
         frames = []
 
-        for _ in range(frames_count):
+        for i in range(frames_count):
             ret, frame = cap.read()
 
             if not ret:
+                print("Frame read failed")
                 continue
 
             frame = cv2.flip(frame, 1)
@@ -20,7 +21,7 @@ class BackgroundModel:
 
             cv2.putText(
                 frame,
-                "Step OUT of frame - capturing background",
+                f"Capturing background {i+1}/{frames_count}",
                 (30, 40),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.8,
@@ -29,9 +30,19 @@ class BackgroundModel:
             )
 
             cv2.imshow("RealityFrame", frame)
-            cv2.waitKey(1)
+
+            if cv2.waitKey(1) & 0xFF == ord("q"):
+                break
+
+        print("Frames captured:", len(frames))
+
+        if len(frames) == 0:
+            print("No frames captured!")
+            return
 
         self.background = np.median(frames, axis=0).astype(np.uint8)
+
+        print("Background captured successfully")
 
     def get(self):
         return self.background

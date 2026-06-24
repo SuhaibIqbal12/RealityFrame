@@ -1,6 +1,6 @@
-# RealityFrame – AI-Powered Augmented Reality & Invisibility System
+# Vision-Reality – AI-Powered Augmented Reality & Invisibility System
 
-RealityFrame is an advanced real-time Computer Vision and Augmented Reality platform built using Python, OpenCV, MediaPipe, and YOLOv8. The system combines gesture recognition, AI-powered object detection, background reconstruction, selective invisibility, and AR overlays into a single interactive experience.
+Vision Reality is an advanced real-time Computer Vision and Augmented Reality platform built using Python, OpenCV, MediaPipe, and YOLOv8. The system combines gesture recognition, AI-powered object detection, background reconstruction, selective invisibility, and AR overlays into a single interactive experience.
 
 The project demonstrates the integration of multiple AI and Computer Vision technologies working together in real time on live webcam feeds.
 
